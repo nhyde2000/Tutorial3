@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 279243383}
   m_Layer: 5
   m_Name: fixedText
-  m_TagString: RubyController
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -643,7 +643,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -121.697044, y: 0, z: 0, w: -34.167297}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12933,7 +12933,7 @@ GameObject:
   - component: {fileID: 1038049099}
   m_Layer: 5
   m_Name: Win Text
-  m_TagString: RubyController
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13567,6 +13567,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366919175}
   m_CullTransparentMesh: 1
+--- !u!1001 &1412518450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4518878578721990792, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_Name
+      value: Robot Hard (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518878578721990796, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182194317458241580, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4518878578721990787, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+--- !u!1 &1412518451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4518878578721990792, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+  m_PrefabInstance: {fileID: 1412518450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1412518452 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5952827121434212207, guid: bb73c08f474d48448976cce8d69da959, type: 3}
+  m_PrefabInstance: {fileID: 1412518450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1412518453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412518451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1addb393773cc04418aaf1b83b968ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  vertical: 1
+  changeTime: 3
+  smokeEffect: {fileID: 1412518452}
+  fixedSound: {fileID: 8300000, guid: e7fa1971a86d60945bb64585c0ac14d5, type: 3}
+  brokenSound: {fileID: 8300000, guid: 6bfbad8ffdf387d4e87e8fa07b62f7c1, type: 3}
 --- !u!1001 &1456599586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14574,16 +14664,16 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
     - target: {fileID: 2240524519520695626, guid: d86d5e1a79d2bef4fb322be4101d461d, type: 3}
       propertyPath: currentAmmo
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2240524519520695626, guid: d86d5e1a79d2bef4fb322be4101d461d, type: 3}
       propertyPath: damageEffect
       value: 
-      objectReference: {fileID: 405534341274703537, guid: 57ad7c70c76864e43bc6a61141691782, type: 3}
+      objectReference: {fileID: 405534341274703537, guid: d077a932dc365ac4f97807551814583b, type: 3}
     - target: {fileID: 2240524519520695626, guid: d86d5e1a79d2bef4fb322be4101d461d, type: 3}
       propertyPath: healthEffect
       value: 
-      objectReference: {fileID: 405534341274703537, guid: df4f23026d3e4fe42883bfa328d26601, type: 3}
+      objectReference: {fileID: 405534341274703537, guid: d077a932dc365ac4f97807551814583b, type: 3}
     - target: {fileID: 2240524519520695626, guid: d86d5e1a79d2bef4fb322be4101d461d, type: 3}
       propertyPath: WinTextObject
       value: 
