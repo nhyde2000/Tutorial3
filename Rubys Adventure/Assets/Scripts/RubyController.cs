@@ -52,6 +52,7 @@ public class RubyController : MonoBehaviour
     public GameObject WinTextObject;
     public GameObject LoseTextObject;
     bool gameOver;
+    bool gameWin;
 
 
     // Start is called before the first frame update
@@ -84,6 +85,7 @@ public class RubyController : MonoBehaviour
         WinTextObject.SetActive(false);
         LoseTextObject.SetActive(false);
         gameOver = false;
+        gameWin = false;
     }
 
     // Update is called once per frame
@@ -148,6 +150,15 @@ public class RubyController : MonoBehaviour
           if (Input.GetKeyDown(KeyCode.R))
         {
             if (gameOver == true)
+
+            {
+                // this loads the currently active scene
+              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+         }
+         if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (gameWin == true)
 
             {
                 // this loads the currently active scene
@@ -257,6 +268,7 @@ public class RubyController : MonoBehaviour
         if (scoreFixed >= 4)
         {
             WinTextObject.SetActive(true);
+            gameWin = true;
         }
     }
 }
