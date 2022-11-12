@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthCollectible : MonoBehaviour
+public class AmmoCollect : MonoBehaviour
 {
     public GameObject pickupParticlePrefab;
     public AudioClip collectedClip;
@@ -12,9 +12,9 @@ public class HealthCollectible : MonoBehaviour
 
         if (controller != null)
         {
-            if(controller.health  < controller.maxHealth)
+            if(controller.currentAmmo  > 0)
             {
-                controller.ChangeHealth(1);
+                controller.ChangeAmmo(1);
                 GameObject pickupParticleObject= Instantiate(pickupParticlePrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
 

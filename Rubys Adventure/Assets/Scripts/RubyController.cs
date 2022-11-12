@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class RubyController : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class RubyController : MonoBehaviour
     public AudioClip hitSound;
 
     // Health and Damage Particles
-    public ParticleSystem healthEffect;
+    
     public ParticleSystem damageEffect;
 
     // Fixed Robots TMP Integers
@@ -49,6 +50,8 @@ public class RubyController : MonoBehaviour
 
     // Win text
     public GameObject WinTextObject;
+    public GameObject LoseTextObject;
+    bool gameOver;
 
 
     // Start is called before the first frame update
@@ -79,6 +82,8 @@ public class RubyController : MonoBehaviour
 
         // Win Text
         WinTextObject.SetActive(false);
+        LoseTextObject.SetActive(false);
+        gameOver = false;
     }
 
     // Update is called once per frame
@@ -140,6 +145,15 @@ public class RubyController : MonoBehaviour
         {
             Application.Quit();
         }
+          if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (gameOver == true)
+
+            {
+                // this loads the currently active scene
+              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+         }
     }
 
     void FixedUpdate()
@@ -171,13 +185,17 @@ public class RubyController : MonoBehaviour
             damageEffect = Instantiate(damageEffect, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
         }
 
-        // When Ruby Gains Health - Particles appear (Bugged right now)
-        if (amount < 0)
+       
+        if (currentHealth <= 1)
         {
-            healthEffect = Instantiate(healthEffect, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
-        }
+            LoseTextObject.SetActive(true);
 
-        // Health math code
+            transform.position = new Vector3(-5f, 0f, -100f);
+            speed = 0;
+            Destroy(gameObject.GetComponent<SpriteRenderer>());
+
+            gameOver = true;
+        }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
 
@@ -196,6 +214,15 @@ public class RubyController : MonoBehaviour
     {
         ammoText.text = "Ammo: " + currentAmmo.ToString();
     }
+      private void OnTriggerEnter2D(Collider2D other){
+        if (other.tag == "Ammo")
+        {
+            currentAmmo += 4;
+            AmmoText();
+            Destroy(other.gameObject);
+         }
+    }
+    
 
     // Projectile Code
     void Launch()
